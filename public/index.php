@@ -48,13 +48,15 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
-
+echo 123;
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+echo 456;
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
+echo 789;
 
 $response->send();
-
+dd('hhahhaha');
 $kernel->terminate($request, $response);
