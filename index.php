@@ -1,7 +1,4 @@
 <?php
-echo 234234234;
-echo phpinfo();
-die;
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
