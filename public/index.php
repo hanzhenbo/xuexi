@@ -49,14 +49,13 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 |
 */
 echo 123;
+die;
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-echo 456;
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
-echo 789;
 
 $response->send();
-dd('hhahhaha');
+
 $kernel->terminate($request, $response);
